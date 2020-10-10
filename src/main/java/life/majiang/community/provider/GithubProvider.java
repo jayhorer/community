@@ -35,7 +35,7 @@ public class GithubProvider {
         try (Response response = client.newCall(request).execute()) {
             String string = response.body().string();//以上为  获取token+statu 内容
             String token = string.split("&")[0].split("=")[1];//截取其中的token信息
-            System.out.println(token);
+            //System.out.println(token); 测试token是否获取
             return token;
         } catch (Exception e) {
             e.printStackTrace();
